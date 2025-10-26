@@ -14,8 +14,8 @@ Proyek ini menjalankan **PostgreSQL** dan **PGAdmin4** menggunakan **Docker Comp
 ## ⚙️ Konfigurasi
 | Service | Port | Container | Catatan |
 |----------|------|------------|----------|
-| PostgreSQL | 22999 | postgres_rifki | Database utama |
-| PGAdmin4 | 44999 | pgadmin_rifki | GUI manajemen DB |
+| PostgreSQL | 22129 | postgres_rifki | Database utama |
+| PGAdmin4 | 44129 | pgadmin_rifki | GUI manajemen DB |
 
 ---
 
@@ -50,7 +50,7 @@ PGADMIN_DEFAULT_PASSWORD=admin123
    - Password: `ifunggul`
 5. Tes akses eksternal di **DBeaver**:
    - Host: `localhost`
-   - Port: `22999`
+   - Port: `22129`
    - Database: `postgres`
    - Username: `postgres`
    - Password: `ifunggul`
