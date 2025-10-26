@@ -41,7 +41,7 @@ PGADMIN_DEFAULT_PASSWORD=admin123
    docker ps
    ```
 3. Buka PGAdmin di browser:
-   - URL: `http://localhost:44999`
+   - URL: `http://localhost:44129`
    - Login: `admin@ifunggul.com` / `admin123`
 4. Tambahkan server:
    - Host: `postgres_rifki`
