@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres_rifki:
+    image: postgres:15
+    container_name: postgres_rifki
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "22129:5432"  
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./setup.sql:/docker-entrypoint-initdb.d/setup.sql
+    networks:
+      - uts_network
+
+  pgadmin_rifki:
+    image: dpage/pgadmin4
+    container_name: pgadmin_rifki
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "44129:80"     
+    depends_on:
+      - postgres_rifki
+    networks:
+      - uts_network
+
+volumes:
+  postgres_data:
+
+networks:
+  uts_network:
+    driver: bridge
